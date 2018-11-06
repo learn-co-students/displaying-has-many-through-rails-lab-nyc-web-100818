@@ -1,0 +1,20 @@
+<h1>Show Page</h1>
+
+Name: <%= @doctor.name %>
+<br><br>
+Department: <%= @doctor.department %>
+<br><br>
+Appointments:
+<ol>
+
+  <% @doctor.appointments.each do |a| %>
+    <li>
+    <%= link_to a.patient.name, a.patient %>
+    <br>
+    <%= a.string_date %>
+    <br>
+    <br>
+    </li>
+  <% end %>
+
+</ol>
