@@ -4,7 +4,7 @@ class Appointment < ActiveRecord::Base
 
   def format_datetime
     string =self.appointment_datetime
-    string.strftime("%B %d, %Y at %I:%M ")
+    string.strftime("%B %d, %Y at %H:%M ")
   end
   
 end
